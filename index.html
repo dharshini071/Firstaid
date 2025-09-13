@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>First Aid: Quick Guides, Steps & Safety</title>
+<meta name="description" content="Learn essential first aid: CPR, choking, bleeding, burns, and more. Clear steps, precautions, remedies, images, and multimedia for learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#0f172a; /* slate-900 */
+--panel:#111827; /* gray-900 */
+--muted:#94a3b8; /* slate-400 */
+--text:#e5e7eb; /* gray-200 */
+--brand:#22c55e; /* green-500 */
+--accent:#38bdf8; /* sky-400 */
+--danger:#ef4444; /* red-500 */
+--warn:#f59e0b; /* amber-500 */
+--ok:#10b981; /* emerald-500 */
+--card:#0b1220; /* deeper */
+--radius:18px;
+--shadow:0 20px 35px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:linear-gradient(180deg,#0a0f1c,#0f172a 20%);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
+a{color:var(--accent);text-decoration:none}
+/* Layout */
+header.hero{position:relative;padding:96px 24px 48px;overflow:clip}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+nav{position:sticky;top:0;z-index:50;background:rgba(14,22,37,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+nav .inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 10px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+.brand svg{width:28px;height:28px}
+.nav-links{display:flex;gap:10px;flex-wrap:wrap}
+.nav-links a{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}
+.nav-links a:hover{background:rgba(255,255,255,.08)}
+
+.hero h1{font-size:clamp(30px,5vw,56px);line-height:1.05;margin:10px 0}
+.hero p{color:var(--muted);font-size:clamp(14px,2.2vw,18px)}
+.cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(56,189,248,.15),rgba(34,197,94,.12));cursor:pointer}
+.btn:hover{transform:translateY(-1px)}
+
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{grid-column:span 12;padding:18px;border-radius:var(--radius);background:linear-gradient(180deg,#0b1220,#0e1627);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.06)}
+@media(min-width:820px){.card.span4{grid-column:span 4}.card.span6{grid-column:span 6}.card.span8{grid-column:span 8}}
+
+h2.section-title{font-size:clamp(22px,3.6vw,36px);margin:10px 0 14px}
+h3{margin:12px 0 6px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,.06)}
+.kicker{color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.18em}
+
+ul.steps{margin:8px 0 0 18px;line-height:1.6}
+.step{margin:6px 0}
+
+.accordion{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.accordion details{background:rgba(255,255,255,.02)}
+.accordion summary{cursor:pointer;padding:14px 16px;font-weight:600}
+.accordion .content{padding:0 16px 16px;color:var(--muted)}
+
+.badge{display:inline-block;padding:4px 8px;border-radius:8px;font-size:12px}
+.danger{background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.35);color:#fecaca}
+.warn{background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.35);color:#fde68a}
+.ok{background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);color:#a7f3d0}
+
+.figure{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:12px 0}
+.figure svg,.figure img{width:120px;height:120px;background:#0a1220;border-radius:16px;border:1px solid rgba(255,255,255,.06);padding:10px}
+.figure figcaption{flex:1;min-width:240px;color:var(--muted)}
+
+.notice{padding:14px;border-radius:12px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.35);color:#bbf7d0}
+.disclaimer{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.35);color:#fecaca}
+
+footer{margin:40px 0 60px;color:var(--muted)}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:760px){.footer-grid{grid-template-columns:repeat(3,1fr)}}
+
+.video{position:relative;overflow:hidden;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
+.video::before{content:"";display:block;padding-top:56.25%}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+.kbd{font-family:ui-monospace, SFMono-Regular, Menlo, monospace;background:#0a1120;border:1px solid rgba(255,255,255,.08);padding:2px 6px;border-radius:6px}
+
+/* Small helper for sticky emergency strip */
+.emergency-strip{position:sticky;top:60px;z-index:45;display:flex;gap:12px;align-items:center;justify-content:center;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.35);color:#fecaca;padding:10px;border-radius:12px}
+</style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav>
+<div class="container inner">
+<div class="brand" aria-label="First Aid Home">
+<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+<rect x="3" y="3" width="18" height="18" rx="4" stroke="white" opacity=".6"/>
+<path d="M8 12h8M12 8v8" stroke="url(#g)" stroke-width="2" stroke-linecap="round"/>
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#22c55e"/>
+<stop offset="1" stop-color="#38bdf8"/>
+</linearGradient>
+</defs>
+</svg>
+<span>First Aid Guide</span>
+</div>
+<div class="nav-links">
+<a href="#basics">Basics</a>
+<a href="#cpr">CPR</a>
+<a href="#choking">Choking</a>
+<a href="#bleeding">Bleeding</a>
+<a href="#burns">Burns</a>
+<a href="#media">Videos</a>
+<a href="#kit">Kit</a>
+<a href="#sources">Sources</a>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<header class="hero container">
+<span class="kicker">Learn. Prepare. Act.</span>
+<h1>Essential First Aid: Clear Steps, Precautions & Remedies</h1>
+<p>Use this page to learn the medical needs, precautions, guidelines and remedies for common first aid emergencies. Includes step‑by‑step images, an audio metronome for CPR rhythm, and videos from trusted organizations.</p>
+<div class="cta">
+<a class="btn" href="#basics">Get Started</a>
+<button class="btn" id="darkToggle" aria-pressed="true">Toggle Glow</button>
+</div>
+</header>
+
+<main class="container">
+<!-- Emergency numbers strip (India aware) -->
+<div class="emergency-strip" role="note" aria-label="Emergency numbers">
+<strong>Emergency?</strong>&nbsp;Call <span class="kbd">112</span> (All-in-one India) or Ambulance <span class="kbd">108</span>.
+<span class="pill">Share your location.</span>
+</div>
+
+<!-- BASICS -->
+<section id="basics" class="card">
+<h2 class="section-title">First Aid Basics: Check • Call • Care</h2>
+<p class="notice">Ensure the scene is safe. Wear gloves or a barrier if available. Get consent before helping a responsive person.</p>
+<div class="grid">
+<figure class="figure card span4">
+<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="#38bdf8" fill="none"/><path d="M16 24h16M24 16v16" stroke="#22c55e" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><strong>1) Check</strong> for responsiveness, normal breathing and life‑threatening bleeding. Shout–tap–shout. Check for no more than 10 seconds.</figcaption>
+</figure>
+<figure class="figure card span4">
+<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="8" stroke="#38bdf8" fill="none"/><path d="M12 18h12l4-4h8v20H12z" fill="#22c55e"/></svg>
+<figcaption><strong>2) Call</strong> emergency services. In India dial <span class="kbd">112</span> (or <span class="kbd">108</span> for ambulance). Put phone on speaker for instructions.</figcaption>
+</figure>
+<figure class="figure card span4">
+<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 30c6-6 12-6 28 0" stroke="#38bdf8" fill="none"/><circle cx="24" cy="22" r="10" stroke="#22c55e" fill="none"/></svg>
+<figcaption><strong>3) Care</strong> following the steps below for the specific emergency until professionals arrive. Use an AED if available.</figcaption>
+</figure>
+</div>
+<p class="badge warn">Disclaimer: Educational only — not a substitute for certified training or medical care.</p>
+</section>
+
+<!-- CPR -->
+<section id="cpr" class="card">
+<h2 class="section-title">Hands‑Only CPR (Adults)</h2>
+<p>Use hands‑only CPR if an adult collapses and is not breathing normally. Push hard and fast in the center of the chest at <strong>100–120 compressions per minute</strong>. Continue until help or an AED is ready.</p>
+<div class="grid">
+<div class="card span6">
+<h3>Steps</h3>
+<ol class="steps">
+<li class="step"><strong>Check</strong> responsiveness & breathing (max 10 seconds). Send someone to <strong>call 112/108</strong> and get an AED.</li>
+<li class="step"><strong>Position</strong> the person on their back on a firm, flat surface. Kneel beside the chest.</li>
+<li class="step"><strong>Hand placement:</strong> heel of one hand in the center of the chest, other hand on top, fingers interlaced, elbows straight.</li>
+<li class="step"><strong>Compress:</strong> at least 5 cm deep, allow full recoil, rate 100–120/min. Minimize interruptions.</li>
+<li class="step"><strong>Use AED</strong> as soon as it arrives. Follow voice prompts.</li>
+</ol>
+<div class="badge ok" style="margin-top:8px">Tip: Compress to the beat of a 100–120 BPM song — or use the metronome →</div>
+</div>
+<div class="card span6">
+<h3>CPR Metronome</h3>
+<p class="muted">Use this audio click to keep the right rhythm.</p>
+<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+<label for="bpm">BPM</label>
+<input id="bpm" type="range" min="90" max="130" value="110" step="1"/>
+<span id="bpmVal" class="pill">110</span>
+<button class="btn" id="metronome">Start / Stop</button>
+</div>
+<div style="height:10px"></div>
+<div class="accordion">
+<details>
+<summary>Children / infants?</summary>
+<div class="content">Children often need compressions <em>and</em> rescue breaths (different technique). If untrained, continue hands‑only while you call for help.</div>
+</details>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CHOKING -->
+<section id="choking" class="card">
+<h2 class="section-title">Choking (Responsive Adult)</h2>
+<div class="grid">
+<div class="card span8">
+<h3>What to do</h3>
+<ol class="steps">
+<li class="step"><strong>Ask</strong> “Are you choking?” If they can cough or speak, encourage coughing and <strong>watch closely</strong>.</li>
+<li class="step"><strong>Severe choking:</strong> Stand to the side and slightly behind. Give <strong>up to 5 back blows</strong> between the shoulder blades with the heel of your hand.</li>
+<li class="step">If not cleared, give <strong>up to 5 abdominal thrusts</strong> (Heimlich). Alternate <strong>5 back blows & 5 thrusts</strong> until the object is expelled or they become unresponsive.</li>
+<li class="step">If they become unresponsive, <strong>call 112/108</strong>, lower to the ground and start CPR. Each time before breaths, <strong>look in the mouth</strong> and remove visible objects.</li>
+</ol>
+<p class="badge warn">Never perform blind finger sweeps. For pregnant or obese adults, use <strong>chest thrusts</strong> instead of abdominal thrusts.</p>
+</div>
+<figure class="figure card span4">
+<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" stroke="#38bdf8" fill="none"/><path d="M22 10h4v12l5 6" stroke="#22c55e" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><strong>Signal</strong>: one or both hands at the throat is the universal choking sign.</figcaption>
+</figure>
+</div>
+</section>
+
+<!-- BLEEDING -->
+<section id="bleeding" class="card">
+<h2 class="section-title">Severe External Bleeding</h2>
+<div class="grid">
+<div class="card span6">
+<h3>Guidelines & Precautions</h3>
+<ul class="steps">
+<li class="step">Use <strong>gloves</strong> or a barrier if available.</li>
+<li class="step">Expose the wound quickly; do not remove objects <strong>embedded</strong> in the wound — pack around them.</li>
+<li class="step">Watch for <strong>signs of shock</strong>: pale, cool, clammy skin; confusion; rapid breathing.</li>
+</ul>
+</div>
+<div class="card span6">
+<h3>Remedies / Steps</h3>
+<ol class="steps">
+<li class="step"><strong>Call 112/108</strong> for life‑threatening bleeding.</li>
+<li class="step"><strong>Direct pressure</strong> with sterile gauze or clean cloth; if blood soaks through, add more layers — <em>do not remove</em>.</li>
+<li class="step"><strong>Apply a tourniquet</strong> if trained and bleeding is uncontrollable from an arm or leg.</li>
+<li class="step"><strong>Immobilize</strong> and keep the person warm; treat for shock.</li>
+</ol>
+</div>
+</div>
+</section>
+
+<!-- BURNS -->
+<section id="burns" class="card">
+<h2 class="section-title">Burns & Scalds</h2>
+<div class="grid">
+<div class="card span6">
+<h3>Immediate Care</h3>
+<ol class="steps">
+<li class="step"><strong>Stop</strong> the burning (remove from heat; smother flames). Ensure your own safety.</li>
+<li class="step"><strong>Cool</strong> the burn under cool/tepid running water for <strong>20 minutes</strong>. <span class="badge danger">Do NOT use ice or butter/creams.</span></li>
+<li class="step"><strong>Remove</strong> tight items near the area (rings, watches), but <em>do not</em> peel off anything stuck to the skin.</li>
+<li class="step"><strong>Cover</strong> loosely with sterile non‑stick dressing or clean cling film (not wrapped around a limb).</li>
+</ol>
+</div>
+<div class="card span6">
+<h3>Seek Medical Help If</h3>
+<ul class="steps">
+<li class="step">Burn is larger than the victim’s palm, deep, on face, hands, genitals, feet, or over a joint.</li>
+<li class="step">Electrical, chemical burns or inhalation injury.</li>
+<li class="step">Signs of infection: increasing pain, redness, swelling, fever.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- MEDIA -->
+<section id="media" class="card">
+<h2 class="section-title">Multimedia: Learn by Watching</h2>
+<div class="grid">
+<div class="card span6">
+<h3>Hands‑Only CPR – American Red Cross</h3>
+<div class="video">
+<iframe title="Hands-Only CPR video" src="https://www.youtube.com/embed/6eRwgM2Pa4o" allowfullscreen loading="lazy"></iframe>
+</div>
+</div>
+<div class="card span6">
+<h3>Adult Choking – St John Ambulance</h3>
+<div class="video">
+<iframe title="Adult choking video" src="https://www.youtube.com/embed/UZLqMqD2YF4" allowfullscreen loading="lazy"></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FIRST AID KIT -->
+<section id="kit" class="card">
+<h2 class="section-title">Build a Basic First Aid Kit</h2>
+<div class="grid">
+<div class="card span4">
+<h3>Essentials</h3>
+<ul class="steps">
+<li class="step">Adhesive bandages (assorted)</li>
+<li class="step">Sterile gauze pads & roller bandage</li>
+<li class="step">Triangular bandage / sling</li>
+<li class="step">Antiseptic wipes & hand sanitizer</li>
+<li class="step">Non‑latex gloves & CPR face shield</li>
+</ul>
+</div>
+<div class="card span4">
+<h3>Medications</h3>
+<ul class="steps">
+<li class="step">Pain reliever (paracetamol/ibuprofen)</li>
+<li class="step">Antihistamine for allergies</li>
+<li class="step">Oral rehydration salts</li>
+</ul>
+</div>
+<div class="card span4">
+<h3>Tools</h3>
+<ul class="steps">
+<li class="step">Tweezers & small scissors</li>
+<li class="step">Instant cold pack</li>
+<li class="step">Digital thermometer</li>
+<li class="step">Elastic wrap bandage</li>
+<li class="step">Tourniquet (if trained)</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- SOURCES -->
+<section id="sources" class="card">
+<h2 class="section-title">Guideline Sources</h2>
+<p class="muted">These steps are summarized from respected organizations. For deeper learning, take a certified first aid course.</p>
+<ul class="steps">
+<li class="step">Hands‑Only CPR: American Red Cross</li>
+<li class="step">Choking: International first aid organizations (e.g., St John Ambulance)</li>
+<li class="step">Severe Bleeding: American Red Cross</li>
+<li class="step">Burns: National Health Service guidance</li>
+<li class="step">India Emergency Number: ERSS 112 / Ambulance 108</li>
+</ul>
+<p class="disclaimer" role="note">This site is for education. When in doubt, call emergency services or seek medical care immediately.</p>
+</section>
+
+<footer>
+<div class="footer-grid">
+<div>
+<strong>Practice saves lives.</strong>
+<p>Consider enrolling in a local First Aid + CPR/AED certification course.</p>
+</div>
+<div>
+<p>© <span id="year"></span> First Aid Guide. Built with HTML, CSS & JavaScript.</p>
+</div>
+<div>
+<p>Feedback? <a href="#" onclick="alert('Thanks!')">Send a note</a></p>
+</div>
+</div>
+</footer>
+</main>
+
+<script>
+// Simple dark glow toggle (purely cosmetic)
+const darkToggle = document.getElementById('darkToggle');
+darkToggle?.addEventListener('click', ()=>{
+document.body.classList.toggle('noglow');
+});
+
+// Footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// CPR Metronome using Web Audio API
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const ctx = new AudioContext();
+let running=false, nextTime=0;
+const bpmEl = document.getElementById('bpm');
+const bpmVal = document.getElementById('bpmVal');
+const btn = document.getElementById('metronome');
+
+function click(time){
